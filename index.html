@@ -20,6 +20,9 @@
             <option value="ARS">Pesitos</option>
             <option value="USD">Dólar oficial del pueblo</option>
             <option value="EUR">Euros</option>
+            <option value="VES">Bolívar venezolano</option>
+            <option value="BRL">Moneda brasuca</option>
+            <option value="CDF">Congo peso</option>
         </select>
 
         <select name="selector" id="selector-de-moneda2" aria-label="Default select example"
@@ -28,6 +31,9 @@
             <option value="ARS">Pesitos</option>
             <option value="USD">Dólar oficial del pueblo</option>
             <option value="EUR">Euros</option>
+            <option value="VES">Bolívar venezolano</option>
+            <option value="BRL">Moneda brasuca</option>
+            <option value="CDF">Congo peso</option>
         </select>
 
 
@@ -37,9 +43,11 @@
     </form>
 
 
-    <h3 class="d-none gap-3 align-items-center" id="mostrar">
-        <span id="mostrarCantidad"></span>
-        <span id="mostrarPrimerMoneda"></span>
+    <h3 class="d-none gap-3 align-items-center d-flex" id="mostrar">
+        <div>
+            <span id="mostrarCantidad"></span>
+            <span id="mostrarPrimeraMoneda"></span>
+        </div>
 
         <a href="javascript:void(0)" id="change" class="text-decoration-none">
             <span class="material-icons-outlined">
@@ -48,8 +56,10 @@
             </span>
         </a>
 
-        <span id="mostrarValor"></span>
-        <span id="mostrarSegundoMoneda"></span>
+        <div>
+            <span id="mostrarValor"></span>
+            <span id="mostrarSegundoMoneda"></span>
+        </div>
     </h3>
 
 
