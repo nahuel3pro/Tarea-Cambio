@@ -2,7 +2,7 @@
 
 const apiurl = 'https://api.exchangerate.host/'
 
-function calcularyMostrarResultado(cantidad, moneda1, moneda2, fecha) {
+function conectarCalcularyMostrarResultado(cantidad, moneda1, moneda2, fecha) {
 
     fetch(`${apiurl}${fecha}?base=${moneda1}`)
         .then(respuesta => respuesta.json())
@@ -14,7 +14,7 @@ function calcularyMostrarResultado(cantidad, moneda1, moneda2, fecha) {
             console.log(respuestaJSON)
         })
 
-        .catch(error => alert('Hubo un error, intente nuevamente o más tarde.'));
+        .catch(() => alert('Hubo un error, intente nuevamente o más tarde.'));
 
 
     mostrarLosValores(cantidad, moneda1, moneda2);
@@ -52,7 +52,7 @@ function invertirValoresSeleccionados() {
     const cantidad = $('#cantidad').val();
     const fecha = $('#fecha').val();
 
-    calcularyMostrarResultado(cantidad, moneda1, moneda2, fecha);
+    conectarCalcularyMostrarResultado(cantidad, moneda1, moneda2, fecha);
 }
 
 function sePuedeCalcular(cantidad, moneda1, moneda2, fecha) {
@@ -61,14 +61,14 @@ function sePuedeCalcular(cantidad, moneda1, moneda2, fecha) {
 }
 
 
-$('#convertir > button').click((e) => {
+$('#convertirValores').click((e) => {
     const moneda1 = $('#selector-de-moneda1').val();
     const moneda2 = $('#selector-de-moneda2').val();
     const fecha = $('#fecha').val();
     const cantidad = $('#cantidad').val();
 
     if (!sePuedeCalcular(cantidad, moneda1, moneda2, fecha)) {
-        calcularyMostrarResultado(cantidad, moneda1, moneda2, fecha);
+        conectarCalcularyMostrarResultado(cantidad, moneda1, moneda2, fecha);
 
     }
 
