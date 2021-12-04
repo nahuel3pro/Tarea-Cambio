@@ -8,42 +8,48 @@
     <title>Tarea Cambio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body class="container-fluid">
 
     <form id='convertir'>
 
-        <select name="selector" id="selector-de-moneda1" aria-label="Default select example"
-            class="form-select form-select-sm">
-            <option selected>Elegí la moneda</option>
-            <option value="ARS">Pesitos</option>
-            <option value="USD">Dólar oficial del pueblo</option>
-            <option value="EUR">Euros</option>
-            <option value="VES">Bolívar venezolano</option>
-            <option value="BRL">Moneda brasuca</option>
-            <option value="CDF">Congo peso</option>
-        </select>
-
-        <select name="selector" id="selector-de-moneda2" aria-label="Default select example"
-            class="form-select form-select-sm">
-            <option selected>Elegí la moneda</option>
-            <option value="ARS">Pesitos</option>
-            <option value="USD">Dólar oficial del pueblo</option>
-            <option value="EUR">Euros</option>
-            <option value="VES">Bolívar venezolano</option>
-            <option value="BRL">Moneda brasuca</option>
-            <option value="CDF">Congo peso</option>
-        </select>
+        <div class="d-flex gap-3 p-3 align-items-center">
 
 
-        <input type="number" id="cantidad" value='5'>
+            <select name="selector" id="selector-de-moneda1" aria-label="Default select example"
+                class="form-select text-center">
+                <option selected>Elegí la moneda</option>
+                <option value="ARS">Pesito</option>
+                <option value="USD">Dólar yanki</option>
+                <option value="EUR">Euro</option>
+                <option value="VES">Bolívar venezolano</option>
+                <option value="BRL">Moneda brasuca</option>
+                <option value="CDF">Congo peso</option>
+                <option value="CAD">Dólar canadiense</option>
+                <option value="GBP">Libra estarlina</option>
+                <option value="RUB">Rublo</option>
+                <option value="AFN">Moneda talibana</option>
+            </select>
 
-        <button type="submit">Convertir</button>
+            <span class="material-icons-outlined" id="monedas2">
+                double_arrow
+            </span>
+
+
+        </div>
+
+
+        <input type="number" id="cantidad" class="form-control m-3" aria-label="Disabled input example">
+
+        <button type="submit" class="btn btn-primary active m-3">Convertir</button>
+
+
     </form>
 
 
-    <h3 class="d-none gap-3 align-items-center d-flex" id="mostrar">
+    <h3 class="d-none gap-3 p-4 align-items-center d-flex border rounded-pill justify-content-center" id="mostrar">
         <div>
             <span id="mostrarCantidad"></span>
             <span id="mostrarPrimeraMoneda"></span>

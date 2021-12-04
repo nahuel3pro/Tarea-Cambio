@@ -18,10 +18,15 @@ function calcularyMostrarResultado(cantidad, moneda1, moneda2) {
 }
 
 function mostrarLosValores(cantidad, moneda1, moneda2) {
-    $('#mostrar').removeClass('d-none');
+    const $mostrar = $('#mostrar')
+    $mostrar.removeClass('d-none');
     $('#mostrarCantidad').text(cantidad);
     $('#mostrarPrimeraMoneda').text(moneda1);
     $('#mostrarSegundoMoneda').text(moneda2);
+
+    if(moneda1 === 'ARS'){
+        $mostrar.addClass('border-danger')
+    }
 }
 
 function invertirValoresSeleccionados() {
@@ -65,3 +70,16 @@ $('#change').click(e => {
 
     e.preventDefault();
 })
+
+
+function agregarSelectorDos(){
+    const selector1 = document.querySelector('#selector-de-moneda1');
+    const selector2 = selector1.cloneNode(true);
+    const posicion = document.querySelector('#monedas2');
+
+    selector2.id='selector-de-moneda2';
+
+    posicion.after(selector2);
+}
+
+agregarSelectorDos();
