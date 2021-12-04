@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Cambio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body class="container-fluid">
+
+    <form id='convertir'>
+
+        <select name="selector" id="selector-de-moneda1" aria-label="Default select example"
+            class="form-select form-select-sm">
+            <option selected>Elegí la moneda</option>
+            <option value="ARS">Pesitos</option>
+            <option value="USD">Dólar oficial del pueblo</option>
+            <option value="EUR">Euros</option>
+        </select>
+
+        <select name="selector" id="selector-de-moneda2" aria-label="Default select example"
+            class="form-select form-select-sm">
+            <option selected>Elegí la moneda</option>
+            <option value="ARS">Pesitos</option>
+            <option value="USD">Dólar oficial del pueblo</option>
+            <option value="EUR">Euros</option>
+        </select>
+
+
+        <input type="number" id="cantidad" value='5'>
+
+        <button type="submit">Convertir</button>
+    </form>
+
+
+    <h3 class="d-none gap-3 align-items-center" id="mostrar">
+        <span id="mostrarCantidad"></span>
+        <span id="mostrarPrimerMoneda"></span>
+
+        <a href="javascript:void(0)" id="change" class="text-decoration-none">
+            <span class="material-icons-outlined">
+                compare_arrows
+
+            </span>
+        </a>
+
+        <span id="mostrarValor"></span>
+        <span id="mostrarSegundoMoneda"></span>
+    </h3>
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>
